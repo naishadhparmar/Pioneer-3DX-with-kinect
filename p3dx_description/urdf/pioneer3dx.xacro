@@ -413,6 +413,9 @@ work original in ucs-ros-pkg.
 
 	</link>
 
+    <link name="laser">
+    </link>
+
 	<joint name="lidar_joint" type="fixed">
 		<axis xyz="0 1 0" />
 		<origin xyz="0 0 0" rpy="0 0 0" />
@@ -425,8 +428,13 @@ work original in ucs-ros-pkg.
 		<origin xyz="0 0 0.05" rpy="0 0 0" />
 		<parent link="top_plate" />
 		<child link="lidartop" />
-	</joint>
+	</joint>	
 
+    <joint name="lidar_optical_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+        <parent link="lidartop"/>
+        <child link="laser"/>
+    </joint>
 
 <!-- lidar connection-->
 

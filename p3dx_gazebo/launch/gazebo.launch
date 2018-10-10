@@ -29,6 +29,6 @@
 		respawn="false" output="screen" args="-urdf -model p3dx -param robot_description" />
 
 	<!-- ros_control p3rd launch file -->
-	<!-- <include file="$(find p3dx_control)/launch/control.launch" /> -->
+	<include file="$(find p3dx_control)/launch/control.launch" />
 
 </launch>
